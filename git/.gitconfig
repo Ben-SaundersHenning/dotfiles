@@ -1,0 +1,17 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential]
+	helper = cache
+[safe]
+	directory = /media/storage/projects/JSTG
+	directory = /media/storage/school/W24/3190_cis/a1
+[init]
+	defaultBranch = main
+[pager]
+	branch = false
+[push]
+	autoSetupRemote = true
