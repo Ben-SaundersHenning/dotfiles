@@ -58,7 +58,7 @@ export PATH=$PATH:~/.config/emacs/bin
 alias ffFind="cd ~ && cd \$(find -L * -type d | fzf)"
 alias ff="cd ~ && cd \$(fd -LH | fzf)"
 
-alias nvimconfig="cd ~/.config/nvim/ && nvim init.lua"
+alias nvimconfig="cd ~/dotfiles/nvim/.config/nvim && nvim init.lua"
 
 function update() {
 
