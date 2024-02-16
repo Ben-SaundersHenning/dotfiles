@@ -19,11 +19,11 @@ return {
 
         },
 
-        keys = {
-
-            { '<leader>c', '<cmd>PasteImage<cr>', desc = 'Paste clipboard image' },
-
-        },
+        -- keys = {
+        --
+        --     { '<leader>c', '<cmd>PasteImage<cr>', desc = 'Paste clipboard image' },
+        --
+        -- },
 
     },
 

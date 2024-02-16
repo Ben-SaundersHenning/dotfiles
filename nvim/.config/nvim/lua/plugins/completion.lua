@@ -27,18 +27,19 @@ return {
 
                 'lua_ls', -- Lua
                 'clangd', -- C
-                'csharp_ls', -- C#
+                -- 'csharp_ls', -- C#
                 'pyright', -- Python
                 'rust_analyzer', -- Rust
                 'html', -- HTML
                 'cssls', -- CSS
-                'quick_lint_js', -- Javscript
+                -- 'quick_lint_js', -- Javscript
                 'tsserver', -- Javascript
                 'emmet_ls', -- emmet
                 'svelte', -- svelte
                 'vimls', -- vim
-                'fortls', -- fortran,
-                'matlab_ls' -- matlab_ls
+                -- 'fortls', -- fortran,
+                'matlab_ls', -- matlab_ls
+                'als', -- Ada
 
             }})
 

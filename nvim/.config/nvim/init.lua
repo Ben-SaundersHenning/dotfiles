@@ -17,24 +17,3 @@ require('config.mappings')
 -- list of package calls.
 require('config.lazy')
 
--- plenary
--- nvim-web-devicons
--- nvim-lspconfig
--- mason.nvim
--- mason-lspconfig.nvim
--- trouble.nvim
--- goto-preview nvim-navic
--- lsp_signature.nvim
--- null-ls_nvim
--- nvim-treesitter
--- nvim-cmp
--- luasnip
---
--- cmp-nvim-lsp
--- cmp-nvim-lua
--- cmp-buffer
--- cmp-path
--- cmp_luasnip
---
--- telescope
--- nvim-colorizer

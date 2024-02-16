@@ -5,6 +5,7 @@
 -- ================================================================ --
 
 local set = vim.keymap.set
+local del = vim.keymap.del
 
 -- Remaps <SPACE> in normal mode (n) to have no operation (Nop)
 -- Just a 'safe' reset of whatever may use the <SPACE> key
