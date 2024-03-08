@@ -39,7 +39,8 @@ return {
                 'vimls', -- vim
                 -- 'fortls', -- fortran,
                 'matlab_ls', -- matlab_ls
-                'als', -- Ada
+                -- 'als', -- Ada
+                'typst_lsp', -- Typst
 
             }})
 
