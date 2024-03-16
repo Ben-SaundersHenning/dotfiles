@@ -36,8 +36,6 @@ opt.backspace = 'indent,eol,start'
 -- directly to the system clipboard.
 vim.o.clipboard = 'unnamedplus'
 
--- Use spaces in place of tabs
-opt.expandtab = true
 
 -- Show whitespace
 opt.list = true
@@ -53,6 +51,9 @@ opt.numberwidth = 2
 
 -- Briefly jump to the matching bracket, if its on screen.
 opt.showmatch = true
+
+-- Use spaces in place of tabs
+opt.expandtab = true
 
 -- Make autoindent count as 4 spaces (default is 8)
 opt.shiftwidth = 4
