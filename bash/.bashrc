@@ -47,6 +47,14 @@ export PS1
 #for doom/emacs commands
 export PATH=$PATH:~/.config/emacs/bin
 
+# pnpm
+export PNPM_HOME="/home/ben/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
 # -> FZF Stuff <- #
 #
 #automatically put there by fzf installtion (not through zypper)
@@ -75,3 +83,4 @@ export DATABASE_URL=postgres://ben:PISQL@jsotqln01/jsot
 
 # temporary Tauri fix
 export WEBKIT_DISABLE_COMPOSITING_MODE=1
+

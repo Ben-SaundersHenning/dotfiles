@@ -7,10 +7,6 @@
 [credential]
 	helper = cache
 [safe]
-	directory = /media/storage/projects/JSTG
-	directory = /media/storage/school/W24/3190_cis/a1
-	directory = /media/storage/school/W24/3190_cis/a2
-	directory = /media/storage/school/W24/3190_cis/a3
 [init]
 	defaultBranch = main
 [pager]

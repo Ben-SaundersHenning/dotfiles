@@ -27,18 +27,18 @@ return {
 
                 'lua_ls', -- Lua
                 'clangd', -- C
-                -- 'csharp_ls', -- C#
+                'csharp_ls', -- C#
                 'pyright', -- Python
                 'rust_analyzer', -- Rust
                 'html', -- HTML
                 'cssls', -- CSS
-                -- 'quick_lint_js', -- Javscript
+                'quick_lint_js', -- Javscript
                 'tsserver', -- Javascript
                 'emmet_ls', -- emmet
-                'svelte', -- svelte
+                -- 'svelte', -- svelte
                 'vimls', -- vim
                 -- 'fortls', -- fortran,
-                'matlab_ls', -- matlab_ls
+                -- 'matlab_ls', -- matlab_ls
                 -- 'als', -- Ada
                 'typst_lsp', -- Typst
 
@@ -123,20 +123,6 @@ return {
 
         },
 
-        -- Cmp, Autocompletion (additional snippets, I think)
-        {
-
-            'hrsh7th/cmp-nvim-lsp',
-
-        },
-
-        -- Signature Help
-        {
-
-            'hrsh7th/cmp-nvim-lsp-signature-help'
-
-        },
-
 
     -- LSP config
     {
@@ -217,6 +203,7 @@ return {
 
     { 'hrsh7th/cmp-nvim-lsp', after='nvim-cmp' }, -- nvim-cmp source for neovim builtin LSP client
 	{ 'hrsh7th/cmp-nvim-lua', after='nvim-cmp' }, -- nvim-cmp source for nvim lua
+	{ 'hrsh7th/cmp-nvim-lsp-signature-help', after='nvim-cmp' }, -- nvim-cmp source for nvim lua
 	{ 'hrsh7th/cmp-buffer', after='nvim-cmp' }, -- nvim-cmp source for buffer words.
 	{ 'hrsh7th/cmp-path', after='nvim-cmp' }, -- nvim-cmp source for filesystem paths.
 	{ 'saadparwaiz1/cmp_luasnip', after='nvim-cmp' }, -- luasnip completion source for nvim-cmp
@@ -232,5 +219,14 @@ return {
         end
 
     },
+
+    -- Rust tools
+    -- {
+    --
+    --   'mrcjkb/rustaceanvim',
+    --   version = '^4', -- Recommended
+    --   lazy = false, -- This plugin is already lazy
+    --
+    -- },
 
 }
