@@ -59,7 +59,8 @@ return {
 
             require('nvim-treesitter.configs').setup({
                 autotag = {
-                    enable = true,
+                    -- enable = true,
+                    enable = false,
                 },
                 highlight = {
                     enable = true,
@@ -210,15 +211,26 @@ return {
 
     {
 
-        'norcalli/nvim-colorizer.lua',
+        'windwp/nvim-autopairs',
 
-        config = function()
+        event = 'InsertEnter',
 
-            require('colorizer').setup({})
-
-        end
+        config = true
 
     },
+
+    -- {
+    --
+    --     'norcalli/nvim-colorizer.lua',
+    --
+    --     config = function()
+    --
+    --         require('colorizer').setup({})
+    --
+    --     end
+    --
+    -- },
+
 
     -- Rust tools
     -- {
