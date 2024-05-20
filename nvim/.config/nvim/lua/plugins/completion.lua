@@ -5,7 +5,7 @@ return {
 
         'williamboman/mason.nvim',
 
-        build = ":MasonUpdate",
+        build = ':MasonUpdate',
 
         config = function ()
 
@@ -209,15 +209,34 @@ return {
 	{ 'hrsh7th/cmp-path', after='nvim-cmp' }, -- nvim-cmp source for filesystem paths.
 	{ 'saadparwaiz1/cmp_luasnip', after='nvim-cmp' }, -- luasnip completion source for nvim-cmp
 
+    -- {
+    --
+    --     'windwp/nvim-autopairs',
+    --
+    --     event = 'InsertEnter',
+    --
+    --     config = true
+    --
+    -- },
+
+
     {
 
-        'windwp/nvim-autopairs',
+        'kylechui/nvim-surround',
 
-        event = 'InsertEnter',
+        version = '*', -- Use for stability; omit to use `main` branch for the latest features
 
-        config = true
+        event = 'VeryLazy',
 
-    },
+        config = function()
+
+            require('nvim-surround').setup({
+                -- Configuration here, or leave empty to use defaults
+            })
+
+        end
+
+    }
 
     -- {
     --
