@@ -7,9 +7,12 @@
 [credential]
 	helper = cache
 [safe]
+    directory = *
 [init]
 	defaultBranch = main
 [pager]
 	branch = false
 [push]
 	autoSetupRemote = true
+[user]
+	name = Ben Saunders-Henning

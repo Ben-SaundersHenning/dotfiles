@@ -14,16 +14,6 @@
 # editor. So uncomment the line below and enter the editor of your choice :-)
 export EDITOR=/usr/bin/nvim
 
-# For some news readers it makes sense to specify the NEWSSERVER variable here export NEWSSERVER=your.news.server If you want to use a Palm device with Linux, uncomment the two lines below.
-# For some (older) Palm Pilots, you might need to set a lower baud rate
-# e.g. 57600 or 38400; lowest is 9600 (very slow!)
-#
-#export PILOTPORT=/dev/pilot
-#export PILOTRATE=115200
-
-# Not sure what this is
-test -s ~/.alias && . ~/.alias || true
-
 # ---> CUSTOM ADDITIONS HERE <--- #
 
 # -> PROMPT <- #
@@ -44,9 +34,6 @@ export PS1
 
 # -> PATH <- #
 
-#for doom/emacs commands
-export PATH=$PATH:~/.config/emacs/bin
-
 # pnpm
 export PNPM_HOME="/home/ben/.local/share/pnpm"
 case ":$PATH:" in
@@ -63,7 +50,6 @@ esac
 
 # -> ALIAS LIST <- #
 
-alias ffFind="cd ~ && cd \$(find -L * -type d | fzf)"
 alias ff="cd ~ && cd \$(fd -LH | fzf)"
 
 alias nvimconfig="cd ~/dotfiles/nvim/.config/nvim && nvim init.lua"
@@ -79,8 +65,10 @@ function update() {
 
 # Env variable for Raspberry Pi Postgresql DB
 export JSTG_DB_POSTGRESQL=postgres://ben:PISQL@jsotqln01/jsot
-export DATABASE_URL=postgres://ben:PISQL@jsotqln01/jsot
+# export DATABASE_URL=postgres://ben:PISQL@jsotqln01/jsot
 
 # temporary Tauri fix
-export WEBKIT_DISABLE_COMPOSITING_MODE=1
+# export WEBKIT_DISABLE_COMPOSITING_MODE=1
 
+
+export PATH=$PATH:/home/ben/.spicetify
