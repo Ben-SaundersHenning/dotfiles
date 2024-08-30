@@ -61,6 +61,17 @@ function update() {
 
 }
 
+function socs() {
+    echo "-- OFF campus WIFI --
+
+1. ssh school-socs
+2. ssh linux.socs.uoguelph.ca
+
+-- ON campus WIFI
+
+1. ssh bsaund03@linux.socs.uoguelph.ca";
+}
+
 # -> OTHER <- #
 
 # Env variable for Raspberry Pi Postgresql DB
