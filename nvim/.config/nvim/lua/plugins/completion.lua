@@ -27,7 +27,7 @@ return {
 
                 'lua_ls', -- Lua
                 'clangd', -- C
-                'csharp_ls', -- C#
+                -- 'csharp_ls', -- C#
                 'pyright', -- Python
                 'rust_analyzer', -- Rust
                 'html', -- HTML
@@ -40,7 +40,7 @@ return {
                 -- 'fortls', -- fortran,
                 -- 'matlab_ls', -- matlab_ls
                 -- 'als', -- Ada
-                'typst_lsp', -- Typst
+                -- 'typst_lsp', -- Typst
 
             }})
 

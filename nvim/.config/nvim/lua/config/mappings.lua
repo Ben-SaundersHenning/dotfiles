@@ -39,3 +39,6 @@ set('n', '<leader>r', ':NvimTreeToggle<CR>', { desc = 'Toggle NerdTree' })
 
 -- Format JSON
 set('n', '<leader>jfp', ':%!jq --indent 4 \'.\'<CR>', { desc = 'Format JSON in current buffer' })
+
+-- Paste Markdown Image
+set('n', '<leader>c', '<cmd>PasteImage<cr>', { desc = 'Paste clipboard image into Markdown' })
