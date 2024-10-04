@@ -1,13 +1,5 @@
-[credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
-[credential]
-	helper = cache
 [safe]
-    directory = *
+    ; directory = *
 [init]
 	defaultBranch = main
 [pager]
@@ -16,3 +8,4 @@
 	autoSetupRemote = true
 [user]
 	name = Ben Saunders-Henning
+    email = ben.shp@proton.me
