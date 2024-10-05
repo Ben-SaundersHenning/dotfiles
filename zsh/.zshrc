@@ -8,15 +8,17 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/ben/.zshrc'
-
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
 setopt globdots
 
+
 GIT='git'
 ZSH_DIR="$HOME/.zsh"
+
+source "$ZSH_DIR"/prompt.zsh
 
 # Load plugin list
 source ~/.zsh/plugin_list.zsh
@@ -36,7 +38,6 @@ for file in "$ZSH_DIR"/plugins/*/*.(plugin.zsh|zsh-theme)(#qN); do
 done
 unset file
 
-source "$ZSH_DIR"/prompt.zsh
 
 # NVM - NodeJS Version Manager
 export NVM_DIR="$HOME/.config/nvm"
@@ -49,9 +50,11 @@ export NVM_DIR="$HOME/.config/nvm"
 bindkey '^[[A' history-substring-search-up
 # bindkey '^[[B' history-substring-search-down
 
+alias ls='lsd'
+alias la='lsd -la'
+
 function list_installed_plugins() {
     for file in "$ZSH_DIR"/plugins/*/*.(plugin.zsh|zsh-theme)(#qN); do
         echo $file
     done
-
 }
