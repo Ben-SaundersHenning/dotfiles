@@ -32,15 +32,16 @@ return {
                 'rust_analyzer', -- Rust
                 'html', -- HTML
                 'cssls', -- CSS
-                'quick_lint_js', -- Javscript
-                'tsserver', -- Javascript
+                -- 'quick_lint_js', -- Javscript
+                'eslint', -- Typescript, Javascript
+                -- 'tsserver', -- Javascript
                 'emmet_ls', -- emmet
                 -- 'svelte', -- svelte
                 'vimls', -- vim
                 -- 'fortls', -- fortran,
                 -- 'matlab_ls', -- matlab_ls
                 -- 'als', -- Ada
-                -- 'typst_lsp', -- Typst
+                'typst_lsp', -- Typst
 
             }})
 
