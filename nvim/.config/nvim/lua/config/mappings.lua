@@ -42,3 +42,4 @@ set('n', '<leader>jfp', ':%!jq --indent 4 \'.\'<CR>', { desc = 'Format JSON in c
 
 -- Paste Markdown Image
 set('n', '<leader>c', '<cmd>PasteImage<cr>', { desc = 'Paste clipboard image into Markdown' })
+

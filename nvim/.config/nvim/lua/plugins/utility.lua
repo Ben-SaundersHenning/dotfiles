@@ -140,25 +140,23 @@ return {
     --
     -- },
 
-    -- -- Tmux Vim navigation
-    -- {
-    --
-    --     'christoomey/vim-tmux-navigator',
-    --
-    --     keys = {
-    --
-    --     { '<C-w>\\', '<cmd>TmuxNavigatePrevious<cr>', desc = 'Go to the previous pane' },
-    --
-    --     { '<C-w>h', '<cmd>TmuxNavigateLeft<cr>', desc = 'Got to the left pane' },
-    --
-    --     { '<C-w>j', '<cmd>TmuxNavigateDown<cr>', desc = 'Got to the down pane' },
-    --
-    --     { '<C-w>k>', '<cmd>TmuxNavigateUp<cr>', desc = 'Got to the up pane' },
-    --
-    --     { '<C-w>l', '<cmd>TmuxNavigateRight<cr>', desc = 'Got to the right pane' },
-    --
-    --     },
-    --
-    -- }
+    -- Tmux Vim navigation
+    {
+
+        'alexghergh/nvim-tmux-navigation',
+
+        config = function()
+
+            require('nvim-tmux-navigation').setup({})
+
+            -- Vim - Tmux navigation
+            vim.keymap.set('n', "<C-h>", '<Cmd>NvimTmuxNavigateLeft<CR>')
+            vim.keymap.set('n', "<C-j>", '<Cmd>NvimTmuxNavigateDown<CR>')
+            vim.keymap.set('n', "<C-k>", '<Cmd>NvimTmuxNavigateUp<CR>')
+            vim.keymap.set('n', "<C-l>", '<Cmd>NvimTmuxNavigateRight<CR>')
+
+        end
+
+    }
 
 }
