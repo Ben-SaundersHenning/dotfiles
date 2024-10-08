@@ -22,7 +22,6 @@ source "$ZSH_DIR"/prompt.zsh
 
 # Load plugin list
 source ~/.zsh/plugin_list.zsh
-
 # Clone any plugins that are not already cloned
 for key value in "${(@kv)PLUGINS}"; do
     # If the plugin is not downloaded
@@ -57,4 +56,24 @@ function list_installed_plugins() {
     for file in "$ZSH_DIR"/plugins/*/*.(plugin.zsh|zsh-theme)(#qN); do
         echo $file
     done
+}
+
+function uppkg() {
+
+    if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+        printf "-- UPDATING TUMBLEWEED -- \n"
+        printf "1. sudo zypper refresh\n"
+        printf "2. sudo zypper dup\n"
+        printf "3. flatpak update\n"
+        # read -p "Are you sure -> " -n 1 -r
+        read -q "REPLY?Are you sure (Y/y) -> ";
+        # echo    # (optional) move to a new line
+        if [[ $REPLY =~ ^[Yy]$ ]] then
+            echo
+            sudo zypper refresh && sudo zypper dup && flatpak update;
+        fi
+    else
+        print 'Script for Tumbleweed. Not Running.'
+    fi
+
 }
