@@ -14,7 +14,6 @@ compinit
 
 setopt globdots
 
-
 GIT='git'
 ZSH_DIR="$HOME/.zsh"
 
@@ -37,11 +36,20 @@ for file in "$ZSH_DIR"/plugins/*/*.(plugin.zsh|zsh-theme)(#qN); do
 done
 unset file
 
+# Conditonal configuration for machines
+if [[ $(uname) == "Darwin" ]]; then
 
-# NVM - NodeJS Version Manager
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+    #MacOS
+    source "$ZSH_DIR"/mac.zsh
+
+
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+
+    #Tumbleweed
+    source "$ZSH_DIR"/tumbleweed.zsh
+
+
+fi
 
 # For JSTG
 # export JSTG_DB_POSTGRESQL=postgres://ben:PISQL@jsotqln01/jsot
@@ -56,24 +64,4 @@ function list_installed_plugins() {
     for file in "$ZSH_DIR"/plugins/*/*.(plugin.zsh|zsh-theme)(#qN); do
         echo $file
     done
-}
-
-function uppkg() {
-
-    if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-        printf "-- UPDATING TUMBLEWEED -- \n"
-        printf "1. sudo zypper refresh\n"
-        printf "2. sudo zypper dup\n"
-        printf "3. flatpak update\n"
-        # read -p "Are you sure -> " -n 1 -r
-        read -q "REPLY?Are you sure (Y/y) -> ";
-        # echo    # (optional) move to a new line
-        if [[ $REPLY =~ ^[Yy]$ ]] then
-            echo
-            sudo zypper refresh && sudo zypper dup && flatpak update;
-        fi
-    else
-        print 'Script for Tumbleweed. Not Running.'
-    fi
-
 }
