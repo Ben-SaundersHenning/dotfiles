@@ -65,3 +65,18 @@ function list_installed_plugins() {
         echo $file
     done
 }
+
+function socs() {
+    echo "-- OFF campus WIFI --
+
+1. ssh school-socs
+2. ssh linux.socs.uoguelph.ca
+
+-- ON campus WIFI
+
+1. ssh bsaund03@linux.socs.uoguelph.ca";
+}
+
+# Temp for Tauri dev
+export WEBKIT_DISABLE_DMABUF_RENDERER=1
+# export WEBKIT_DISABLE_COMPOSITING_MODE=1

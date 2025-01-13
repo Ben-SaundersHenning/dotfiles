@@ -8,4 +8,5 @@
 	autoSetupRemote = true
 [user]
 	name = Ben Saunders-Henning
-    email = ben.shp@proton.me
+[credential]
+	helper = /usr/libexec/git/git-credential-libsecret
