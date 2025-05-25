@@ -3,7 +3,7 @@ return {
     -- Mason, a package manager for language servers and more
     {
 
-        'williamboman/mason.nvim',
+        'mason-org/mason.nvim',
 
         build = ':MasonUpdate',
 
@@ -19,7 +19,7 @@ return {
     -- This is where you add language servers
     {
 
-        'williamboman/mason-lspconfig.nvim',
+        'mason-org/mason-lspconfig.nvim',
 
         config = function ()
 
@@ -34,14 +34,14 @@ return {
                 'cssls', -- CSS
                 -- 'quick_lint_js', -- Javscript
                 'eslint', -- Typescript, Javascript
-                -- 'tsserver', -- Javascript
-                'emmet_ls', -- emmet
+                'tsserver', -- Javascript
+                'emmet-language-server', -- emmet
                 -- 'svelte', -- svelte
                 'vimls', -- vim
                 -- 'fortls', -- fortran,
                 -- 'matlab_ls', -- matlab_ls
                 -- 'als', -- Ada
-                'typst_lsp', -- Typst
+                'tinymist', -- Typst
 
             }})
 
@@ -136,20 +136,15 @@ return {
             local lspconfig = require('lspconfig')
             local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-            require('mason-lspconfig').setup_handlers({
+            require('mason-lspconfig').setup({
 
                 function(server_name)
-
-                    lspconfig[server_name].setup({
-
-                        on_attach = lsp_attach,
-                        capabilities = capabilities,
-
-                    })
-
+                    vim.lsp.enable(server_name)
                 end
 
             })
+
+            vim.lsp.enable('eslint')
 
             -- Global mappings These are all defaults.
 

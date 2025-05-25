@@ -32,7 +32,7 @@ set('n', '<leader>g', ':nohlsearch<CR>', { desc = 'Clear search highlights' })
 set('n', '<leader>r', ':NvimTreeToggle<CR>', { desc = 'Toggle NerdTree' })
 
 -- Open up Trouble page
--- set('n', '<leader>p', ':Trouble diagnostics toggle<CR>', { desc = 'Toggle Trouble Page' })
+set('n', '<leader>p', ':Trouble diagnostics toggle<CR>', { desc = 'Toggle Trouble Page' })
 
 -- Open up Fterm
 -- set('n', '<leader>t', ':FTermToggle<CR>', { desc = 'Toggle FTerm' })
