@@ -28,20 +28,22 @@ return {
                 'lua_ls', -- Lua
                 'clangd', -- C
                 -- 'csharp_ls', -- C#
-                'pyright', -- Python
+                -- 'pyright', -- Python
                 'rust_analyzer', -- Rust
                 'html', -- HTML
                 'cssls', -- CSS
                 -- 'quick_lint_js', -- Javscript
                 'eslint', -- Typescript, Javascript
-                'tsserver', -- Javascript
-                'emmet-language-server', -- emmet
+                'emmet_language_server', -- emmet
                 -- 'svelte', -- svelte
                 'vimls', -- vim
                 -- 'fortls', -- fortran,
                 -- 'matlab_ls', -- matlab_ls
                 -- 'als', -- Ada
+                'vue_ls', -- Vue
+                'vtsls', -- Vue (?)
                 'tinymist', -- Typst
+                'jedi_language_server' -- Python,
 
             }})
 
