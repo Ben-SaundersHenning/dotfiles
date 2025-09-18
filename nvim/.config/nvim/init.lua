@@ -8,14 +8,18 @@
 -- Directory containing any settings/options/tweaks.
 require('config.options')
 
--- Custom mappings.
-require('config.mappings')
-
 -- Adds explicit filetype detection based on file extensions.
 require('config.filetype')
+
+-- Custom mappings (built in vim features).
+require('config.vimmappings')
 
 -- Lazy, the package manager for this
 -- config. It gets loaded first. Contains
 -- list of package calls.
 require('config.lazy')
+
+-- Custom mappings (for plugins).
+require('config.mappings')
+
 
