@@ -14,6 +14,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
 
+eval "$(pyenv virtualenv-init -)"
+
 function uppkg() {
 
     printf "-- UPDATING TUMBLEWEED -- \n"
@@ -28,4 +30,8 @@ function uppkg() {
         sudo zypper refresh && sudo zypper dup && flatpak update;
     fi
 
+}
+
+function newnote() {
+    typst init @local/notes:0.0.1
 }

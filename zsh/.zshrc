@@ -81,3 +81,7 @@ function socs() {
 export WEBKIT_DISABLE_DMABUF_RENDERER=1
 # export WEBKIT_DISABLE_COMPOSITING_MODE=1
 
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /home/ben/Projects/jendu/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /home/ben/Projects/jendu/node_modules/tabtab/.completions/electron-forge.zsh
