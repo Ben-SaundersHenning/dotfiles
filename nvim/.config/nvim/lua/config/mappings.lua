@@ -22,3 +22,15 @@ set('n', "<C-h>", '<Cmd>NvimTmuxNavigateLeft<CR>', { desc = 'Nvim-Tmux navigate 
 set('n', "<C-j>", '<Cmd>NvimTmuxNavigateDown<CR>', { desc = 'Nvim-Tmux navigate down' })
 set('n', "<C-k>", '<Cmd>NvimTmuxNavigateUp<CR>', { desc = 'Nvim-Tmux navigate up' })
 set('n', "<C-l>", '<Cmd>NvimTmuxNavigateRight<CR>', { desc = 'Nvim-Tmux navigate right' })
+
+-- Commenting
+-- See the plugins/editor.lua file.
+-- <leader>i -> line comment
+-- <leader>u -> block comment
+-- <leader>n -> line comment at the end of the line
+
+-- Format JSON
+set('n', '<leader>jfp', ':%!jq --indent 4 \'.\'<CR>', { desc = 'Format JSON in current buffer' })
+
+-- Configured <space-g> to clear the search highlighting, in normal mode
+set('n', '<leader>g', ':nohlsearch<CR>', { desc = 'Clear search highlights' })

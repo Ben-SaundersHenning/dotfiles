@@ -6,7 +6,7 @@
 -- ================================================================ --
 
 -- Directory containing any settings/options/tweaks.
-require('config.vimoptions')
+require('config.options')
 
 -- Adds explicit filetype detection based on file extensions.
 -- require('config.filetype')
@@ -14,6 +14,8 @@ require('config.vimoptions')
 -- Custom mappings (built in vim features).
 -- require('config.vimmappings')
 
+-- Custom mappings (for plugins).
+require('config.mappings')
 
 -- Lazy, the package manager for this
 -- config. It gets loaded first. Contains
@@ -23,5 +25,3 @@ require('config.lazy')
 vim.o.background = "dark"
 vim.cmd([[colorscheme gruvbox]])
 
--- Custom mappings (for plugins).
-require('config.mappings')
