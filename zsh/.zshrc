@@ -66,6 +66,9 @@ function list_installed_plugins() {
     done
 }
 
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
 function socs() {
     echo "-- OFF campus WIFI --
 
