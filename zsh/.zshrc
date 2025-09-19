@@ -66,6 +66,9 @@ function list_installed_plugins() {
     done
 }
 
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
 function socs() {
     echo "-- OFF campus WIFI --
 
@@ -81,3 +84,7 @@ function socs() {
 export WEBKIT_DISABLE_DMABUF_RENDERER=1
 # export WEBKIT_DISABLE_COMPOSITING_MODE=1
 
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /home/ben/Projects/jendu/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /home/ben/Projects/jendu/node_modules/tabtab/.completions/electron-forge.zsh
