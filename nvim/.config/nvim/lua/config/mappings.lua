@@ -34,3 +34,12 @@ set('n', '<leader>jfp', ':%!jq --indent 4 \'.\'<CR>', { desc = 'Format JSON in c
 
 -- Configured <space-g> to clear the search highlighting, in normal mode
 set('n', '<leader>g', ':nohlsearch<CR>', { desc = 'Clear search highlights' })
+
+-- Open up Trouble diagnostics page
+set('n', '<leader>p', ':Trouble diagnostics toggle<CR>', { desc = 'Toggle Trouble diagnostics page' })
+
+-- Open up Trouble symbols page
+set('n', '<leader> ', ':Trouble symbols toggle<CR>', { desc = 'Toggle Trouble symbols page' })
+
+-- Open up Trouble TODO page
+set('n', '<leader>f', ':Trouble todo toggle<CR>', { desc = 'Toggle Trouble todo page' })
