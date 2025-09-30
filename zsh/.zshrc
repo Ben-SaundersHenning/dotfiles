@@ -51,6 +51,15 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
 
 fi
 
+# yazi navigation 
+function y() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    IFS= read -r -d '' cwd < "$tmp"
+    [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+    rm -f -- "$tmp"
+}
+
 # For JSTG
 # export JSTG_DB_POSTGRESQL=postgres://ben:PISQL@jsotqln01/jsot
 
