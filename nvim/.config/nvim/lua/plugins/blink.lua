@@ -49,6 +49,15 @@ return {
       -- C-n/C-p or Up/Down: Select next/previous item
       -- C-e: Hide menu
       -- C-k: Toggle signature help (if signature.enabled = true)
+
+      signature = {
+        enabled = true,
+        trigger = { enabled = true },
+        window = {
+          border = "rounded"
+        },
+      },
+
       --
       -- See :h blink-cmp-config-keymap for defining your own keymap
       keymap = { preset = 'default' },
@@ -60,12 +69,24 @@ return {
       },
 
       -- (Default) Only show the documentation popup when manually triggered
-      completion = { documentation = { auto_show = true } },
+      completion = {
+        documentation = { auto_show = true },
+        ghost_text = { enabled = true }, -- inline preview
+      },
 
       -- Default list of enabled providers defined so that you can extend it
       -- elsewhere in your config, without redefining it, due to `opts_extend`
       sources = {
         default = { 'lsp', 'snippets', 'path', 'buffer' },
+      },
+
+      sorting = {
+        priority = {
+          snippets = 100, -- higher = more important
+          lsp = 80,
+          buffer = 50,
+          path = 40,
+        }
       },
 
       -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
