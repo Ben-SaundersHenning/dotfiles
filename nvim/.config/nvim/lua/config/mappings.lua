@@ -30,7 +30,7 @@ set('n', "<C-l>", '<Cmd>NvimTmuxNavigateRight<CR>', { desc = 'Nvim-Tmux navigate
 -- <leader>n -> line comment at the end of the line
 
 -- Format JSON
-set('n', '<leader>jfp', ':%!jq --indent 4 \'.\'<CR>', { desc = 'Format JSON in current buffer' })
+set('n', '<leader>jfp', ':%!jq --indent 2 \'.\'<CR>', { desc = 'Format JSON in current buffer' })
 
 -- Configured <space-g> to clear the search highlighting, in normal mode
 set('n', '<leader>g', ':nohlsearch<CR>', { desc = 'Clear search highlights' })

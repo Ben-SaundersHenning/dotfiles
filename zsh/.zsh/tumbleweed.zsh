@@ -16,6 +16,8 @@ eval "$(pyenv init - zsh)"
 
 eval "$(pyenv virtualenv-init -)"
 
+eval "$(zoxide init zsh)"
+
 function uppkg() {
 
     printf "-- UPDATING TUMBLEWEED -- \n"
