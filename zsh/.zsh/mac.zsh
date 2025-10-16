@@ -1,5 +1,7 @@
 ### MAC OS SPECIFIC CONFIGURATION ###
 
+export PATH="/opt/homebrew/bin:$PATH"
+
 # NVM - NodeJS Version Manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
