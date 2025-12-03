@@ -32,6 +32,9 @@ set('n', "<C-l>", '<Cmd>NvimTmuxNavigateRight<CR>', { desc = 'Nvim-Tmux navigate
 -- Format JSON
 set('n', '<leader>jfp', ':%!jq --indent 2 \'.\'<CR>', { desc = 'Format JSON in current buffer' })
 
+-- Format XML
+set('n', '<leader>xfp', ':%!xmllint --format -<CR>', { desc = 'Format XML in current buffer' })
+
 -- Configured <space-g> to clear the search highlighting, in normal mode
 set('n', '<leader>g', ':nohlsearch<CR>', { desc = 'Clear search highlights' })
 

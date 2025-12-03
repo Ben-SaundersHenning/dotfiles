@@ -11,6 +11,8 @@ local opt = vim.opt
 -- If you type a <BS> (backspace) or CTRL-D, the indent is deleted
 opt.autoindent = true
 
+opt.smartindent = true
+
 -- If a file changed outside of NVim while being open in NVim,
 -- read and update the changes. Does not apply if the file has
 -- been deleted while being open in NVim.
@@ -59,6 +61,8 @@ opt.shiftwidth = 2
 
 -- Make tabs count as 2 spaces (default is 8)
 opt.tabstop = 2
+
+opt.softtabstop = 2
 
 -- Enable GUI colors for terminal
 opt.termguicolors = true
