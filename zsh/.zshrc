@@ -97,3 +97,10 @@ export WEBKIT_DISABLE_DMABUF_RENDERER=1
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [[ -f /home/ben/Projects/jendu/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /home/ben/Projects/jendu/node_modules/tabtab/.completions/electron-forge.zsh
+
+# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# For ASDF
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
