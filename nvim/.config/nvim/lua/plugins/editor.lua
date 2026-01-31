@@ -41,11 +41,27 @@ return {
   {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons', opts = {} },
-    opts = {
-      options = {
-        theme = 'jellybeans'
+    opts = function()
+
+      local function getWords()
+        -- the third string here is the string for visual-block mode (^V)
+        if vim.fn.mode() == "v" or vim.fn.mode() == "V" or vim.fn.mode() == "" then
+          return "Selected: " .. vim.fn.wordcount().visual_words .. " words"
+        else
+          return vim.fn.wordcount().words .. " words"
+        end
+      end
+
+      return {
+        options = {
+          theme = "jellybeans",
+        },
+        sections = {
+          lualine_x = { getWords, "encoding", "fileformat", "filetype" },
+        },
       }
-    },
+
+    end,
     -- extensions = {'trouble'}
   },
 
