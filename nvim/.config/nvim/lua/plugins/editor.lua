@@ -74,6 +74,17 @@ return {
             -- Configuration here, or leave empty to use defaults
         })
     end
-  }
+  },
+
+  -- mini align (align text interactively)
+  {
+
+    "nvim-mini/mini.align",
+
+    version = false,
+    opts = {}
+
+  },
+
 
 }
