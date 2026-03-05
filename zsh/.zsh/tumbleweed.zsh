@@ -20,21 +20,18 @@ eval "$(zoxide init zsh)"
 
 function uppkg() {
 
-    printf "-- UPDATING TUMBLEWEED -- \n"
-    printf "1. sudo zypper refresh\n"
-    printf "2. sudo zypper dup\n"
-    printf "3. flatpak update\n"
-    # read -p "Are you sure -> " -n 1 -r
-    read -q "REPLY?Are you sure (Y/y) -> ";
-    # echo    # (optional) move to a new line
-    if [[ $REPLY =~ ^[Yy]$ ]] then
-        echo
-        sudo zypper refresh && sudo zypper dup && flatpak update;
-    fi
+  printf "-- UPDATING TUMBLEWEED -- \n"
+  printf "1. sudo zypper refresh\n"
+  printf "2. sudo zypper dup\n"
+  printf "3. flatpak update\n"
+  # read -p "Are you sure -> " -n 1 -r
+  read -q "REPLY?Are you sure (Y/y) -> ";
+  # echo    # (optional) move to a new line
+  if [[ $REPLY =~ ^[Yy]$ ]] then
+    echo
+    sudo zypper refresh && sudo zypper dup && flatpak update;
+  fi
 
 }
 
-function newnote() {
-    typst init @local/notes:0.0.1
-}
-
+alias teams="flatpak run com.github.IsmaelMartinez.teams_for_linux"
