@@ -45,6 +45,9 @@ opt.mouse = "a"
 -- Print the line numbers
 opt.number = true
 
+-- Relative line numbers
+opt.relativenumber = true
+
 -- Line numbers will take up 2 spaces at minimum when printing
 opt.numberwidth = 2
 

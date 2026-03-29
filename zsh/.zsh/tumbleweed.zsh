@@ -34,4 +34,6 @@ function uppkg() {
 
 }
 
-alias teams="flatpak run com.github.IsmaelMartinez.teams_for_linux"
+teams() {
+  flatpak run com.github.IsmaelMartinez.teams_for_linux "$1"
+}

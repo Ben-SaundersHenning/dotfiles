@@ -5,6 +5,15 @@
 -- specific files.                                                  --
 -- ================================================================ --
 
+local set = vim.keymap.set
+
+-- Remaps <SPACE> in normal mode (n) to have no operation (Nop)
+-- Just a 'safe' reset of whatever may use the <SPACE> key
+set('n', '<SPACE>', '<Nop>')
+
+-- Make the space key the mapleader
+vim.g.mapleader = " " -- space is the leader key
+
 -- Directory containing any settings/options/tweaks.
 require('config.options')
 
