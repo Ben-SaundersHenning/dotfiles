@@ -104,3 +104,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # For ASDF
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+alias nnvim='NVIM_APPNAME=nvim-vim-pack nvim'
