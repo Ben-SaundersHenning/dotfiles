@@ -1,37 +1,50 @@
 -- ================================================================ --
 -- ━━━━━━━━━━━━━━━━━━━━━━━━❰ NVIM CONFIG ❱━━━━━━━━━━━━━━━━━━━━━━━━━ --
---                                                                  --
--- General Config for NVIM - This file should call upon other,      --
--- specific files.                                                  --
 -- ================================================================ --
 
 local set = vim.keymap.set
 
 -- Remaps <SPACE> in normal mode (n) to have no operation (Nop)
--- Just a 'safe' reset of whatever may use the <SPACE> key
+ -- - Just a 'safe' reset of whatever may use the <SPACE> key
 set('n', '<SPACE>', '<Nop>')
 
 -- Make the space key the mapleader
-vim.g.mapleader = " " -- space is the leader key
+vim.g.mapleader = ' ' -- space is the leader key
+vim.g.maplocalleader = ' ' -- space is the leader key
 
--- Directory containing any settings/options/tweaks.
-require('config.options')
+require('options')
 
--- Adds explicit filetype detection based on file extensions.
--- require('config.filetype')
+vim.pack.add({
+  'https://github.com/ellisonleao/gruvbox.nvim.git',
+  'https://github.com/alexghergh/nvim-tmux-navigation.git',
+  'https://github.com/nvim-tree/nvim-web-devicons.git',
+  'https://github.com/rachartier/tiny-inline-diagnostic.nvim.git',
+  'https://github.com/nvim-lualine/lualine.nvim.git'
+})
 
--- Custom mappings (built in vim features).
--- require('config.vimmappings')
+require('nvim-tmux-navigation').setup({})
+require("tiny-inline-diagnostic").setup({})
+vim.diagnostic.config({ virtual_text = false }) -- disable default virtual text
 
--- Custom mappings (for plugins).
-require('config.mappings')
+local function getWords()
+  -- the third string here is the string for visual-block mode (^V)
+  if vim.fn.mode() == "v" or vim.fn.mode() == "V" or vim.fn.mode() == "" then
+    return "Selected: " .. vim.fn.wordcount().visual_words .. " words"
+  else
+    return vim.fn.wordcount().words .. " words"
+  end
+end
 
--- Lazy, the package manager for this
--- config. It gets loaded first. Contains
--- list of package calls.
-require('config.lazy')
+require('lualine').setup {
+  options = {
+    theme = "gruvbox",
+  },
+  sections = {
+    lualine_x = { getWords, "encoding", "fileformat", "filetype" },
+  },
+}
 
-vim.o.background = "dark"
-vim.g.gruvbox_material_enable_italic = true
-vim.cmd('colorscheme gruvbox-material')
+require('mappings')
 
+vim.o.background = 'dark'
+vim.cmd.colorscheme('gruvbox')
