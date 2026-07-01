@@ -51,13 +51,13 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
 
 fi
 
-# yazi navigation 
+# yazi navigation
 function y() {
-    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-    yazi "$@" --cwd-file="$tmp"
-    IFS= read -r -d '' cwd < "$tmp"
-    [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-    rm -f -- "$tmp"
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  command yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd < "$tmp"
+  [ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+  command rm -f -- "$tmp"
 }
 
 # For JSTG
@@ -104,5 +104,4 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # For ASDF
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-
-alias nnvim='NVIM_APPNAME=nvim-vim-pack nvim'
+# eval "$(~/.local/bin/mise activate zsh)"
