@@ -1,4 +1,4 @@
-local opt = vim.opt
+local opt = vim.opt_local
 
 -- Make autoindent count as 2 spaces (default is 8)
 opt.shiftwidth = 2

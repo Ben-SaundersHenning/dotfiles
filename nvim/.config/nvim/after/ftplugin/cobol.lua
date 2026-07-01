@@ -1,7 +1,7 @@
 -- Set commentstring for Cobol filetypes.
 vim.bo.commentstring = '*>%s'
 
-local opt = vim.opt
+local opt = vim.opt_local
 
 -- Make autoindent count as 4 spaces (default is 8)
 opt.shiftwidth = 4
