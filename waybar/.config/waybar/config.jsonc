@@ -1,0 +1,70 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 26,
+    "spacing": 4,
+
+    "modules-left": ["niri/workspaces", "niri/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "bluetooth", "network", "tray", "custom/power"],
+
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "●",
+            "default": "○"
+        }
+    },
+
+    "niri/window": {
+        "format": "📋 {title}",
+        "max-length": 30,
+        "separate-outputs": true
+    },
+
+    "clock": {
+        "format": "  {:%I:%M %p  •  %A, %b %d}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 Muted",
+        "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "pavucontrol",
+        "scroll-step": 5
+    },
+
+    "bluetooth": {
+        "format": " On",
+        "format-disabled": "󰂲 Off",
+        "format-connected": " {device_alias}",
+        "on-click": "blueman-manager"
+    },
+
+    "network": {
+        "format-wifi": "󰖩 {essid}",
+        "format-ethernet": "󰈀 Wired",
+        "format-disconnected": "󰖪 Disconnected",
+        "on-click": "kitty -e nmtui"
+    },
+
+    // "cpu": {
+    //     "format": "󰘚 Sys",
+    //     "interval": 2,
+    //     "on-click": "kitty -e htop",
+    //     "tooltip": true,
+    //     "tooltip-format": "CPU Usage: {usage}%\nMemory: {context}\nDisk Used: {percentage}%"
+    // },
+
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "hyprlock"
+    },
+
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10
+    }
+}
